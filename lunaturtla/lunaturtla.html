@@ -6,11 +6,16 @@
 		<meta charset="UTF-8">
 		<title>lunaturtla</title>
 		<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 		
 	</head>
 	
 	<body>
 	
+		<script type="text/javascript">
+			
+		</script>
+		
 		<style type="text/css">
 		a {
 			color: #404040;
@@ -18,30 +23,58 @@
 		}
 		a:hover {
 			color: #808080;
+			text-decoration: none;
+		}
+		div {
+			font-family: 'Noto Sans', sans-serif;
+			font-size: 120%;
+			position: absolute;
+			left: 66%;
+		}
+		#about {
+			top: 20%;
+		}
+		#projects {
+			top: 50%;
 		}
 		table {
 			font-family: 'Poiret One', cursive;
 			font-size: 225%;
 			text-align: left;
+			position: fixed;
+			top: 33%;
+			left: 5%;
+		}
+		.backToTop {
+			position: absolute;
+			right: 0%;
 		}
 		</style>
 		
-		<script type="text/javascript">
-		
-		</script>
-
 		<table>
 			<tr>
 				<td><a href="../homepage.html">Home</a></td>
 			</tr>
 			<tr>
-				<td><a>About</a></td>
+				<td><a href="#about">About</a></td>
 			</tr>
 			<tr>
-				<td><a>Projects</a></td>
+				<td><a href="#projects">Projects</a></td>
 			</tr>
 		</table>
-	
+		
+		<div id="about">
+			Nobody here but us chickens
+			<br>
+			<a class="backToTop" href="#about">Back to top</a>
+		</div>
+		
+		<div id="projects">
+			Nobody here but us chickens
+			<br>
+			<a class="backToTop" href="#about">Back to top</a>
+		</div>
+		
 	</body>
 	
 </html>
