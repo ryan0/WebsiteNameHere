@@ -4,7 +4,7 @@
 	<head>
 	
 		<meta charset="UTF-8">
-		<title>lunaturtla</title>
+		<title>lunaturtla | Jasper Lee</title>
 		<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 		
@@ -13,7 +13,14 @@
 	<body>
 	
 		<script type="text/javascript">
-			
+			function changeToEn() {
+				document.getElementById("about").innerHTML = "Nobody here but us chickens";
+				document.getElementById("projects").innerHTML = "Nobody here but us chickens";
+			}
+			function changeToFr() {
+				document.getElementById("about").innerHTML = "Il n'y a personne mais nous poulets";
+				document.getElementById("projects").innerHTML = "Il n'y a personne mais nous poulets";
+			}
 		</script>
 		
 		<style type="text/css">
@@ -28,14 +35,24 @@
 		div {
 			font-family: 'Noto Sans', sans-serif;
 			font-size: 120%;
+			color: #404040;
 			position: absolute;
 			left: 66%;
 		}
+		#en {
+			top: 0%;
+		}
+		#fr {
+			top: 5%;
+		}
+		#main {
+			top: 45%;
+		}
 		#about {
-			top: 20%;
+			top: 100%;
 		}
 		#projects {
-			top: 50%;
+			top: 200%;
 		}
 		table {
 			font-family: 'Poiret One', cursive;
@@ -44,10 +61,6 @@
 			position: fixed;
 			top: 33%;
 			left: 5%;
-		}
-		.backToTop {
-			position: absolute;
-			right: 0%;
 		}
 		</style>
 		
@@ -63,16 +76,19 @@
 			</tr>
 		</table>
 		
+		<div onclick="changeToEn()" id="en">en</div>
+		<div onclick="changeToFr()" id="fr">fr</div>
+		
+		<div id="main">
+			Jasper Lee
+		</div>
+		
 		<div id="about">
 			Nobody here but us chickens
-			<br>
-			<a class="backToTop" href="#about">Back to top</a>
 		</div>
 		
 		<div id="projects">
 			Nobody here but us chickens
-			<br>
-			<a class="backToTop" href="#about">Back to top</a>
 		</div>
 		
 	</body>
