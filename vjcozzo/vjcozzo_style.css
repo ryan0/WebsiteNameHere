@@ -8,3 +8,16 @@ table {
     padding: 8px;
     cellspacing: 8px;
 }
+
+#green-border {
+    border-style: solid;
+    border-color: #347C17;
+    border-width: 4px;
+}
+
+#blue-border {
+    border-style: solid;
+    border-color: #000398;
+    border-wdth: 5px;
+    background-color: #E0F8F7;
+}
