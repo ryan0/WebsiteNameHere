@@ -16,8 +16,28 @@ table {
 }
 
 #blue-border {
+    margin: auto;
+    width: 50%;
+    height: 4%;
+    position: fixed;
+    bottom: 4%;
+    left: 25%;
+    right: 25%;
     border-style: solid;
     border-color: #000398;
     border-wdth: 5px;
-    background-color: #E0F8F7;
+    background-color: #FFFFFF;
+}
+
+a.horizontal_bar {
+    display: inline-block;
+    padding: 5px;
+    background-color: #D0E8E7;
+}
+
+a.active {
+    display: inline-block;
+    padding: 5px;
+    background-color: #3090C7;
+    color: #FFFFFF;
 }
