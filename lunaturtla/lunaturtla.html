@@ -16,10 +16,12 @@
 			function changeToEn() {
 				document.getElementById("about").innerHTML = "Nobody here but us chickens";
 				document.getElementById("projects").innerHTML = "Nobody here but us chickens";
+				document.getElementById("contact").innerHTML = "Nobody here but us chickens";
 			}
 			function changeToFr() {
 				document.getElementById("about").innerHTML = "Il n'y a personne mais nous poulets";
 				document.getElementById("projects").innerHTML = "Il n'y a personne mais nous poulets";
+				document.getElementById("contact").innerHTML = "Il n'y a personne mais nous poulets";
 			}
 		</script>
 		
@@ -34,37 +36,46 @@
 		}
 		div {
 			font-family: 'Noto Sans', sans-serif;
-			font-size: 120%;
 			color: #404040;
 			position: absolute;
 		}
 		#en {
-			top: 0%;
 			left: 90%;
 		}
 		#fr {
-			top: 0%;
 			left: 93%;
 		}
 		#main {
+			font-size: 150%;
 			top: 43%;
 			left: 50%;
 		}
 		#about {
+			font-size: 120%;
 			top: 100%;
 			left: 50%;
 		}
 		#projects {
+			font-size: 120%;
 			top: 200%;
 			left: 50%;
+		}
+		#contact {
+			font-size: 120%;
+			top: 300%;
+			left: 50%;
+		}
+		.lang {
+			position: fixed;
+			top: 2%;
 		}
 		table {
 			font-family: 'Poiret One', cursive;
 			font-size: 225%;
 			text-align: left;
 			position: fixed;
-			top: 33%;
-			left: 5%;
+			top: 30%;
+			left: 6%;
 		}
 		</style>
 		
@@ -78,10 +89,13 @@
 			<tr>
 				<td><a href="#projects">Projects</a></td>
 			</tr>
+			<tr>
+				<td><a href="#contact">Contact</a></td>
+			</tr>
 		</table>
 		
-		<div onclick="changeToEn()" id="en">en</div>
-		<div onclick="changeToFr()" id="fr">fr</div>
+		<div onclick="changeToEn()" id="en" class="lang">en</div>
+		<div onclick="changeToFr()" id="fr" class="lang">fr</div>
 		
 		<div id="main">
 			Jasper Lee
@@ -92,6 +106,10 @@
 		</div>
 		
 		<div id="projects">
+			Nobody here but us chickens
+		</div>
+		
+		<div id="contact">
 			Nobody here but us chickens
 		</div>
 		
