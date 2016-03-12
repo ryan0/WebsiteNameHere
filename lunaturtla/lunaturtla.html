@@ -12,65 +12,46 @@
 	
 	<body>
 	
-		<script type="text/javascript">
-			function changeToEn() {
-				document.getElementById("about").innerHTML = "Nobody here but us chickens";
-				document.getElementById("projects").innerHTML = "Nobody here but us chickens";
-				document.getElementById("contact").innerHTML = "Nobody here but us chickens";
-			}
-			function changeToFr() {
-				document.getElementById("about").innerHTML = "Il n'y a personne mais nous poulets";
-				document.getElementById("projects").innerHTML = "Il n'y a personne mais nous poulets";
-				document.getElementById("contact").innerHTML = "Il n'y a personne mais nous poulets";
-			}
+		<script src='content/jquery-1.12.1.js' type='text/javascript'></script>
+		<script src='content/jquery.scrollTo.min.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+			$(document).ready(function(){
+				$("#ntop").click(function() {
+					$.scrollTo($("#ctop"));
+				});
+				$("#nabout").click(function() {
+					$.scrollTo($("#cabout"));
+				});
+				$("#nprojects").click(function() {
+					$.scrollTo($("#cprojects"));
+				});
+				$("#ncontact").click(function() {
+					$.scrollTo($("#ccontact"));
+				});
+				$("#en").click(function() {
+					$(".content").animate({"opacity": 0}, 1000, function () {
+						$("#cabout").text("Nobody here but us chickens");
+						$("#cprojects").text("Nobody here but us chickens");
+						$("#ccontact").text("Nobody here but us chickens");
+					}).animate({"opacity": 1}, 1000);
+				});
+				$("#fr").click(function() {
+					$(".content").animate({"opacity": 0}, 1000, function () {
+						$("#cabout").text("Il n'y a personne mais nous poulets");
+						$("#cprojects").text("Il n'y a personne mais nous poulets");
+						$("#ccontact").text("Il n'y a personne mais nous poulets");
+					}).animate({"opacity": 1}, 1000);
+				});
+			});
 		</script>
 		
-		<style type="text/css">
-		a {
+		<style type='text/css'>
+		
+		.navigation {
 			color: #404040;
-			text-decoration: none;
 		}
-		a:hover {
+		.navigation:hover {
 			color: #808080;
-			text-decoration: none;
-		}
-		div {
-			font-family: 'Noto Sans', sans-serif;
-			color: #404040;
-			position: absolute;
-			height: 100%;
-		}
-		#en {
-			left: 90%;
-		}
-		#fr {
-			left: 93%;
-		}
-		#main {
-			font-size: 150%;
-			top: 43%;
-			left: 50%;
-		}
-		#about {
-			font-size: 120%;
-			top: 100%;
-			left: 50%;
-		}
-		#projects {
-			font-size: 120%;
-			top: 200%;
-			left: 50%;
-		}
-		#contact {
-			font-size: 120%;
-			top: 300%;
-			left: 50%;
-		}
-		.lang {
-			position: fixed;
-			top: 2%;
-		}
-		.lang:hover {
 			cursor: pointer;
 		}
 		table {
@@ -81,39 +62,82 @@
 			top: 30%;
 			left: 6%;
 		}
+		.content {
+			font-family: 'Noto Sans', sans-serif;
+			color: #404040;
+			position: absolute;
+			height: 100%;
+		}
+		#ctop {
+			font-size: 150%;
+			top: 0%;
+			left: 50%;
+			padding-top: 21%;
+		}
+		#cabout {
+			font-size: 120%;
+			top: 100%;
+			left: 50%;
+		}
+		#cprojects {
+			font-size: 120%;
+			top: 200%;
+			left: 50%;
+		}
+		#ccontact {
+			font-size: 120%;
+			top: 300%;
+			left: 50%;
+		}
+		.lang {
+			font-family: 'Noto Sans', sans-serif;
+			color: #404040;
+			position: fixed;
+			top: 2%;
+		}
+		.lang:hover {
+			color: #808080;
+			cursor: pointer;
+		}
+		#en {
+			left: 90%;
+		}
+		#fr {
+			left: 93%;
+		}
 		</style>
 		
 		<table>
 			<tr>
-				<td><a href="../homepage.html">Home</a></td>
+				<td><div id='ntop' class='navigation'>Top</div></td>
 			</tr>
 			<tr>
-				<td><a href="#about">About</a></td>
+				<td><div id='nabout' class='navigation'>About</div></td>
 			</tr>
 			<tr>
-				<td><a href="#projects">Projects</a></td>
+				<td><div id='nprojects' class='navigation'>Projects</div></td>
 			</tr>
 			<tr>
-				<td><a href="#contact">Contact</a></td>
+				<td><div id='ncontact' class='navigation'>Contact</div></td>
 			</tr>
 		</table>
 		
-		<div onclick="changeToEn()" id="en" class="lang">en</div>
-		<div onclick="changeToFr()" id="fr" class="lang">fr</div>
+		<div id='en' class='lang'>en</div>
+		<div id='fr' class='lang'>fr</div>
 		
-		<div id="main">
+		<div id='ctop' class='content'>
 			Jasper Lee
 		</div>
 		
-		<div id="about">
+		<div id='cabout' class='content'>
 			Nobody here but us chickens
 		</div>
 		
-		<div id="projects">
+		<div id='cprojects' class='content'>
 			Nobody here but us chickens
 		</div>
 		
-		<div id="contact">
+		<div id='ccontact' class='content'>
 			Nobody here but us chickens
 		</div>
 		
