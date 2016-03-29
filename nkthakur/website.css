@@ -1,9 +1,68 @@
 h1{
-text-align: center;
-font-family: "Times New Roman", Times, serif
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
 }
 body {
     background-color: lightgreen;
 }
-.websiteFormat{color:white; font-family:arial}
+.totalNavBar{
+	height:40px;
+	background:red;
+}
+
+.totalNavBar ul{
+	margin:0;
+	padding:0;
+}
+
+.totalNavBar ul li{
+	list-style:none;
+}
+
+.totalNavBar ul li a{
+	text-decoration: none;
+}
+
+.websiteFormat{
+	color:white; 
+	font-family:arial;
+}
+
+.navbarHeader{
+	width: 100%
+	height:auto;
+	padding-top:25px;
+}
+
+.navbar {
+	width: 1024px;
+	height:40px;
+	margin:0 auto;
+	background:blue;
+	text-align:center;
+	font family: "Times New Roman", Times, serif;
+	cellspacing:10;
+	id: blue-border;
+}
+
+#about
+{
+	width:100px;
+	height:auto;
+	color:blue;
+	float: left;
+	display: block;
+	padding: 15px; 15px;
+}
+
+#projects
+{
+	width:100px;
+	height:auto;
+	color:blue;
+	float: left;
+	display: block;
+	padding: 15px; 15px;
+}
+
 
